@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<meta name="description" content="Begin your Solmara season — intake, portrait, and enrollment. (Fictional brand concept; demonstration flow.)">
+<title>Begin — Solmara</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 30V16a12 12 0 0 1 24 0v14h-4V16a8 8 0 0 0-16 0v14z' fill='%239A7233'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="wordmark" href="index.html" aria-label="Solmara">Solm<span>a</span>ra</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a class="btn btn--gold btn--nav" href="begin.html" aria-current="page">Begin</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+  </div>
+</header>
+
+<main class="begin-shell">
+
+  <div class="demo-note">
+    <span class="dot" aria-hidden="true"></span>
+    <span><strong>Concept demonstration.</strong> Solmara is a fictional brand. Nothing you enter leaves your browser, and payment is simulated — in production this flow runs on Stripe.</span>
+  </div>
+
+  <span class="label">Begin Your Season</span>
+
+  <div class="progress" aria-hidden="true">
+    <div class="p-step active" data-p="1"><span class="p-dot">i</span><span class="p-name">Intake</span></div>
+    <div class="p-line"></div>
+    <div class="p-step" data-p="2"><span class="p-dot">ii</span><span class="p-name">Portrait</span></div>
+    <div class="p-line"></div>
+    <div class="p-step" data-p="3"><span class="p-dot">iii</span><span class="p-name">Enrollment</span></div>
+    <div class="p-line"></div>
+    <div class="p-step" data-p="4"><span class="p-dot">iv</span><span class="p-name">Welcome</span></div>
+  </div>
+
+  <!-- STEP 1 — INTAKE -->
+  <section class="panel active" data-step="1">
+    <h2>Seven quiet <em>minutes.</em></h2>
+    <p class="lede">There are no wrong answers — only honest ones. Everything here shapes the season we compose for you.</p>
+
+    <div class="field" data-required>
+      <label for="f-name">Your name</label>
+      <input type="text" id="f-name" autocomplete="name" placeholder="As you'd like us to address you">
+      <span class="err">We'd like to know what to call you.</span>
+    </div>
+
+    <div class="field" data-required>
+      <label for="f-email">Email</label>
+      <input type="email" id="f-email" autocomplete="email" placeholder="Where your concierge can reach you">
+      <span class="err">A valid email lets your concierge reach you.</span>
+    </div>
+
+    <div class="field" data-required data-kind="choice">
+      <label>What is this season for?</label>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="f-intent" value="renewal"><span>Renewal after a demanding chapter</span></label>
+        <label class="choice"><input type="radio" name="f-intent" value="health"><span>Rebuilding health &amp; energy</span></label>
+        <label class="choice"><input type="radio" name="f-intent" value="milestone"><span>Marking a milestone</span></label>
+        <label class="choice"><input type="radio" name="f-intent" value="unsure"><span>I'm not sure yet</span></label>
+      </div>
+      <span class="err">Choose whichever is closest — it can change.</span>
+    </div>
+
+    <div class="field" data-required data-kind="choice">
+      <label>How do your weeks currently feel?</label>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="f-pace" value="overfull"><span>Overfull</span></label>
+        <label class="choice"><input type="radio" name="f-pace" value="uneven"><span>Uneven</span></label>
+        <label class="choice"><input type="radio" name="f-pace" value="flat"><span>Flat</span></label>
+        <label class="choice"><input type="radio" name="f-pace" value="steady"><span>Steady, but stale</span></label>
+      </div>
+      <span class="err">Pick the texture that fits best.</span>
+    </div>
+
+    <div class="field">
+      <label for="f-story">In your own words <span style="text-transform:none;letter-spacing:0;font-weight:400">(optional)</span></label>
+      <textarea id="f-story" placeholder="What would a well-composed season change for you?"></textarea>
+      <p class="hint">A sentence is plenty. Your concierge reads every word.</p>
+    </div>
+
+    <div class="wizard-nav">
+      <span></span>
+      <button class="btn btn--solid" data-next>Continue to Your Portrait</button>
+    </div>
+  </section>
+
+  <!-- STEP 2 — PORTRAIT / UPLOAD -->
+  <section class="panel" data-step="2">
+    <h2>Your <em>portrait.</em></h2>
+    <p class="lede">Share a few photographs that tell the truth of your current season — yourself, your space, your table. They give your concierge what forms cannot.</p>
+
+    <div class="field" data-required data-kind="photos">
+      <label>Photographs <span style="text-transform:none;letter-spacing:0;font-weight:400">(1–6 images)</span></label>
+      <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Upload photographs">
+        <div class="dz-icon" aria-hidden="true">✦</div>
+        <p>Drag photographs here, or <span class="browse">browse your device</span></p>
+        <p class="hint" style="margin-top:8px">JPEG, PNG, or HEIC · up to 25&nbsp;MB each</p>
+      </div>
+      <input type="file" id="file-input" accept="image/*" multiple hidden>
+      <div class="thumbs" id="thumbs"></div>
+      <span class="err">Please share at least one photograph — anything honest will do.</span>
+      <p class="hint" style="margin-top:14px">Held in your private dossier. Never shared, never used in marketing; returned or destroyed at season's end. <em>(In this demonstration, images never leave your browser.)</em></p>
+    </div>
+
+    <div class="wizard-nav">
+      <button class="btn-back" data-back>&larr; Back to Intake</button>
+      <button class="btn btn--solid" data-next>Continue to Enrollment</button>
+    </div>
+  </section>
+
+  <!-- STEP 3 — ENROLLMENT / CHECKOUT -->
+  <section class="panel" data-step="3">
+    <h2>Reserve your <em>place.</em></h2>
+    <p class="lede">One flat fee, fully returned if the season doesn't proceed after your consultation.</p>
+
+    <div class="order-card">
+      <div class="order-row"><span>The Season — twelve weeks, accompanied</span><span>$3,800</span></div>
+      <div class="order-row"><span>Private consultation &amp; composed protocol</span><span>Included</span></div>
+      <div class="order-row"><span>Dedicated concierge, weekly recalibration</span><span>Included</span></div>
+      <div class="order-row"><span>Closing portrait &amp; keepsake dossier</span><span>Included</span></div>
+      <div class="order-row total"><span>Due today</span><span>$3,800</span></div>
+    </div>
+
+    <div class="card-grid">
+      <div class="field span2" data-required>
+        <label for="c-name">Name on card</label>
+        <input type="text" id="c-name" autocomplete="off" placeholder="Full name">
+        <span class="err">Please enter the name on the card.</span>
+      </div>
+      <div class="field span2" data-required data-kind="cardnum">
+        <label for="c-num">Card number</label>
+        <input type="text" id="c-num" inputmode="numeric" autocomplete="off" placeholder="4242 4242 4242 4242" maxlength="19">
+        <span class="err">Enter a 16-digit card number (any digits — this is a demonstration).</span>
+      </div>
+      <div class="field" data-required data-kind="expiry">
+        <label for="c-exp">Expiry</label>
+        <input type="text" id="c-exp" inputmode="numeric" autocomplete="off" placeholder="MM / YY" maxlength="7">
+        <span class="err">MM / YY</span>
+      </div>
+      <div class="field" data-required data-kind="cvc">
+        <label for="c-cvc">CVC</label>
+        <input type="text" id="c-cvc" inputmode="numeric" autocomplete="off" placeholder="123" maxlength="4">
+        <span class="err">3–4 digits.</span>
+      </div>
+    </div>
+
+    <div class="secure-note">
+      <span class="lock" aria-hidden="true">🔒</span>
+      <span>In production, card details are handled entirely by <strong>Stripe</strong> — they never touch the site's own servers. This demonstration accepts any digits and stores nothing.</span>
+    </div>
+
+    <div class="wizard-nav">
+      <button class="btn-back" data-back>&larr; Back to Portrait</button>
+      <button class="btn btn--solid" id="pay-btn" data-next>Complete Enrollment — $3,800</button>
+    </div>
+  </section>
+
+  <!-- STEP 4 — CONFIRMATION -->
+  <section class="panel" data-step="4">
+    <div class="confirm">
+      <div class="seal" aria-hidden="true">✦</div>
+      <h2>Welcome to your <em>season.</em></h2>
+      <p class="lede" id="confirm-msg">Your place is reserved. Your concierge is already reading your intake, and you'll hear from them within two days to arrange your first consultation.</p>
+      <span class="ref" id="confirm-ref">Season Ref — SOL-0000</span>
+      <p class="small" style="margin-top:36px">A confirmation and receipt would arrive by email in the production flow.</p>
+      <p style="margin-top:44px"><a class="btn" href="index.html">Return Home</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <a class="wordmark" href="index.html" aria-label="Solmara">Solm<span>a</span>ra</a>
+      <ul class="foot-links">
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="begin.html">Begin</a></li>
+      </ul>
+    </div>
+    <div class="disclaimer">
+      <b>Fictional Brand — Design Concept</b><br>
+      Solmara is a fictional business created as a portfolio design study by Francis Mercado. All names, people, testimonials, and details are invented; any resemblance to a real business is coincidental. No orders are taken and no data is collected — the onboarding flow is a working front-end demonstration only.
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="begin.js"></script>
+</body>
+</html>
