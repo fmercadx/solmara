@@ -18,4 +18,6 @@ Hand-built static HTML/CSS/JS — no frameworks, no build step. Bodoni Moda + Ha
 
 ## Design notes
 
-Quiet-luxury editorial direction: high-contrast didone display type, warm limestone palette, arch motifs, film-grain texture, staggered load-in and scroll reveals. Type-led art direction — no stock photography.
+Quiet-luxury editorial direction: high-contrast didone display type, warm limestone palette with terracotta and eucalyptus accents, arch motifs, film-grain texture, staggered load-in and scroll reveals.
+
+Photography sourced from [Unsplash](https://unsplash.com/license) (free license).

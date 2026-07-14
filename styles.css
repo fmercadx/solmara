@@ -145,9 +145,10 @@ section{position:relative}
   aspect-ratio:0.62;
   border-radius:999px 999px 0 0;
   background:
-    radial-gradient(120% 90% at 30% 10%, rgba(240,196,120,.5), transparent 58%),
-    radial-gradient(90% 70% at 75% 80%, rgba(102,117,95,.28), transparent 60%),
-    linear-gradient(168deg, #F0CE94 0%, #E0A96A 36%, #C97F45 68%, #A8512A 100%);
+    radial-gradient(120% 90% at 30% 10%, rgba(240,196,120,.28), transparent 58%),
+    linear-gradient(rgba(168,81,42,.14), rgba(168,81,42,.14)),
+    url("assets/hero-light.jpg") center/cover no-repeat;
+  box-shadow:0 30px 80px -30px rgba(38,32,20,.35);
   z-index:0;
 }
 .hero-arch::before{
@@ -488,6 +489,21 @@ footer .wordmark{color:var(--dark-text);font-size:19px}
   display:inline-block;border:1px solid var(--line);border-radius:999px;
   padding:10px 26px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--umber);
   background:var(--cream);
+}
+
+/* ————— Photography ————— */
+.img-arch{
+  display:block;width:min(340px,100%);aspect-ratio:.76;object-fit:cover;
+  border-radius:999px 999px 0 0;
+  border:1px solid var(--line);
+  box-shadow:0 24px 60px -28px rgba(38,32,20,.4);
+  margin-top:44px;
+}
+.photo-strip{
+  display:block;width:100%;
+  height:clamp(280px,42vh,480px);object-fit:cover;
+  border-radius:6px;
+  box-shadow:0 30px 70px -30px rgba(38,32,20,.35);
 }
 
 /* ————— Section tints ————— */
