@@ -1,4 +1,4 @@
-// Solmara — onboarding wizard (front-end demonstration; nothing leaves the browser)
+// Solmara onboarding wizard (front-end demonstration; nothing leaves the browser)
 (function () {
   var panels = document.querySelectorAll('.panel');
   var psteps = document.querySelectorAll('.p-step');
@@ -17,7 +17,7 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // ————— Validation —————
+  // --- Validation ---
   function validateField(field) {
     var kind = field.dataset.kind || 'text';
     var ok = true;
@@ -59,7 +59,7 @@
     f.addEventListener('change', function () { f.classList.remove('invalid'); });
   });
 
-  // ————— Navigation —————
+  // --- Navigation ---
   document.querySelectorAll('[data-back]').forEach(function (b) {
     b.addEventListener('click', function () { show(current - 1); });
   });
@@ -82,14 +82,14 @@
         msg.textContent = name + ', your place is reserved. Your concierge is already reading your intake, and you’ll hear from them within two days to arrange your first consultation.';
       }
       var ref = 'SOL-' + String(Math.floor(1000 + Math.random() * 9000));
-      document.getElementById('confirm-ref').textContent = 'Season Ref — ' + ref;
+      document.getElementById('confirm-ref').textContent = 'Season Ref · ' + ref;
       btn.disabled = false;
-      btn.textContent = 'Complete Enrollment — $3,800';
+      btn.textContent = 'Complete Enrollment · $3,800';
       show(4);
     }, 1800);
   }
 
-  // ————— Photo upload —————
+  // --- Photo upload ---
   var files = [];
   var MAX_FILES = 6;
   var MAX_SIZE = 25 * 1024 * 1024;
@@ -149,7 +149,7 @@
     thumbs.appendChild(div);
   }
 
-  // ————— Card input formatting —————
+  // --- Card input formatting ---
   var cnum = document.getElementById('c-num');
   cnum.addEventListener('input', function () {
     var v = cnum.value.replace(/\D/g, '').slice(0, 16);

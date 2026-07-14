@@ -1,4 +1,4 @@
-// Solmara — shared behavior
+// Solmara shared behavior
 (function () {
   // Nav background on scroll
   var nav = document.querySelector('.nav');
